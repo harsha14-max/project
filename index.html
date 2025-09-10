@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nova — Modern One‑Page Template</title>
+  <meta name="description" content="A clean, responsive one‑page website template you can adapt for any project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d12;--panel:#121622;--muted:#98a2b3;--text:#e6eaf2;--brand:#6ea8fe;--brand-2:#8b5cf6;--ring:rgba(110,168,254,.5);
+      --card:#0f1320;--shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1200px 800px at 80% -10%,rgba(139,92,246,.25),transparent),radial-gradient(900px 700px at -10% 30%,rgba(110,168,254,.2),transparent),var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--text);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.1rem;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:600;box-shadow:var(--shadow);border:0;cursor:pointer;transition:transform .15s ease, box-shadow .2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.12)}
+    .chip{padding:.35rem .6rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;font-size:.8rem;color:var(--muted);display:inline-flex;gap:.4rem;align-items:center}
+    header.nav{position:sticky;top:0;z-index:1000;background:rgba(11,13,18,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav .row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800;letter-spacing:.5px}
+    .logo .mark{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 140deg at 50% 50%,var(--brand),var(--brand-2));box-shadow:0 0 0 4px rgba(110,168,254,.08)}
+    .navlinks{display:flex;gap:1.2rem}
+    .navlinks a{font-weight:600;color:#cbd5e1;opacity:.9}
+    .navlinks a:hover{color:#fff}
+    .hamburger{display:none;background:none;border:0;color:var(--text);font-size:1.4rem}.hero{padding:88px 0 40px;position:relative;overflow:hidden}
+.grid2{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.eyebrow{margin-bottom:10px}
+h1{font-size:clamp(2rem,4.8vw,3.4rem);line-height:1.1;margin:.4rem 0 1rem;font-weight:800}
+.lead{color:#c7cbd6;font-size:1.1rem}
+.cta{margin-top:1.25rem;display:flex;gap:.75rem;flex-wrap:wrap}
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+
+section{padding:72px 0}
+h2{font-size:clamp(1.6rem,3.6vw,2.2rem);line-height:1.15;margin:0 0 18px;font-weight:800}
+.muted{color:var(--muted)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:1.05rem}
+
+.showcase{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:center}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.price .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.price .amount{font-size:2rem;font-weight:800}
+.price ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.price li{display:flex;align-items:center;gap:.5rem}
+
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{font-style:italic;color:#cbd5e1}
+
+form.contact{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form.contact .full{grid-column:1/-1}
+input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0b0f1b;color:#e5e9f2;outline:0;transition:box-shadow .15s,border-color .15s}
+input:focus, textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:var(--brand)}
+textarea{min-height:120px}
+
+footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:#9aa4b2}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px}
+.small{font-size:.85rem;color:#9aa4b2}
+
+.badge{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .6rem;border-radius:999px;background:rgba(110,168,254,.08);border:1px dashed rgba(110,168,254,.35);font-size:.8rem;color:#cfe1ff}
+
+.hidden{display:none}
+
+@media (max-width: 980px){
+  .grid2,.showcase{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr 1fr}
+  .pricing,.testimonials,.footer-grid{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .hamburger{display:block}
+}
+
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <div class="container row">
+      <a href="#top" class="logo" aria-label="Nova Home">
+        <div class="mark" aria-hidden="true"></div>
+        <span>NOVA</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn" style="padding:.5rem .8rem">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle Menu" id="menuBtn">☰</button>
+    </div>
+  </header>  <!-- HERO -->  <section class="hero">
+    <div class="container grid2">
+      <div>
+        <span class="chip eyebrow">✨ Launch faster with a gorgeous starter</span>
+        <h1>Build your idea with a clean, modern one‑page website</h1>
+        <p class="lead">Nova gives you a polished foundation: responsive layout, sticky nav, smooth scrolling, pricing, testimonials, and a working contact form (no backend needed).</p>
+        <div class="cta">
+          <a class="btn" href="#pricing">Start Now</a>
+          <a class="btn secondary" href="#features">See Features</a>
+        </div>
+        <div style="margin-top:16px" class="small">No framework required. Pure HTML/CSS/JS. Easily port to React/Next.js later.</div>
+      </div>
+      <div class="hero-card" aria-label="Product preview">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Dashboard preview" />
+      </div>
+    </div>
+  </section>  <!-- FEATURE GRID -->  <section id="features">
+    <div class="container">
+      <h2>Everything you need to ship</h2>
+      <p class="muted">Mix & match these blocks for a landing page, product, clinic, portfolio, or SaaS.</p>
+      <div class="features" style="margin-top:18px">
+        <div class="card"><h3>Responsive Layout</h3><p>Looks great on phones, tablets, and desktops out‑of‑the‑box.</p></div>
+        <div class="card"><h3>Sticky Navigation</h3><p>Always‑visible header with smooth scroll links for quick access.</p></div>
+        <div class="card"><h3>Pricing Tables</h3><p>Three clean tiers with feature bullets and prominent CTAs.</p></div>
+        <div class="card"><h3>Testimonial Cards</h3><p>Social proof with avatar, name, and role to boost trust.</p></div>
+        <div class="card"><h3>Contact Form</h3><p>Client‑side validation + Formspree/Netlify support ready.</p></div>
+        <div class="card"><h3>Dark Aesthetic</h3><p>Elegant dark UI with soft gradients and subtle glassmorphism.</p></div>
+      </div>
+    </div>
+  </section>  <!-- SHOWCASE -->  <section id="showcase">
+    <div class="container showcase">
+      <div class="panel">
+        <span class="badge">UI Kit Included</span>
+        <h2 style="margin-top:10px">Sections & components you can reuse</h2>
+        <ul>
+          <li>Hero + Feature grid + Showcase + Pricing + FAQ + Contact</li>
+          <li>Buttons, chips, badges, cards, panels, and flexible grids</li>
+          <li>Accessible HTML with focus rings & semantic landmarks</li>
+        </ul>
+        <div style="margin-top:12px" class="small">Tip: Replace images & text, then hook the form to your email.</div>
+      </div>
+      <div class="panel">
+        <img src="https://images.unsplash.com/photo-1633114128171-2a9c859b1b47?q=80&w=1200&auto=format&fit=crop" alt="Components preview">
+      </div>
+    </div>
+  </section>  <!-- PRICING -->  <section id="pricing">
+    <div class="container">
+      <h2>Simple pricing</h2>
+      <p class="muted">Pick a plan. Swap the copy with your own. Buttons can open checkout links.</p>
+      <div class="pricing" style="margin-top:18px">
+        <div class="card price">
+          <div class="top"><span class="chip">Starter</span><span class="amount">₹0</span></div>
+          <ul>
+            <li>One page</li>
+            <li>Basic contact form</li>
+            <li>Email support</li>
+          </ul>
+          <div style="margin-top:14px"><button class="btn" data-buy="starter">Choose</button></div>
+        </div>
+        <div class="card price" style="border:1px solid rgba(110,168,254,.35)">
+          <div class="top"><span class="chip">Pro</span><span class="amount">₹499</span></div>
+          <ul>
+            <li>Multi‑section site</li>
+            <li>Custom domain</li>
+            <li>Priority support</li>
+          </ul>
+          <div style="margin-top:14px"><button class="btn" data-buy="pro">Choose</button></div>
+        </div>
+        <div class="card price">
+          <div class="top"><span class="chip">Business</span><span class="amount">₹1499</span></div>
+          <ul>
+            <li>Blog & CMS ready</li>
+            <li>Analytics & SEO</li>
+            <li>Consultation call</li>
+          </ul>
+          <div style="margin-top:14px"><button class="btn" data-buy="business">Choose</button></div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- TESTIMONIALS -->  <section>
+    <div class="container">
+      <h2>Loved by makers</h2>
+      <div class="testimonials" style="margin-top:18px">
+        <figure class="card"><blockquote class="quote">"Swapped my content and shipped in an hour. It just works."</blockquote><figcaption class="small">— Aarya, Indie Hacker</figcaption></figure>
+        <figure class="card"><blockquote class="quote">"Design looks premium without any framework or build step."</blockquote><figcaption class="small">— Kabir, Freelancer</figcaption></figure>
+        <figure class="card"><blockquote class="quote">"Perfect base for client sites. Clean, fast, accessible."</blockquote><figcaption class="small">— Nisha, Agency Owner</figcaption></figure>
+      </div>
+    </div>
+  </section>  <!-- FAQ -->  <section id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details class="card"><summary><strong>How do I deploy this?</strong></summary><div class="small">Drag this file into Vercel, Netlify, Cloudflare Pages, or GitHub Pages. No build needed.</div></details>
+      <details class="card"><summary><strong>How do I connect the contact form?</strong></summary><div class="small">Use a service like <em>Formspree</em> or <em>Netlify Forms</em>. Replace the action URL below with your endpoint.</div></details>
+      <details class="card"><summary><strong>Can I split CSS/JS into separate files?</strong></summary><div class="small">Yes. Create <code>styles.css</code> and <code>main.js</code>, move the blocks, and link them with <code>&lt;link&gt;</code> and <code>&lt;script src&gt;</code>.</div></details>
+    </div>
+  </section>  <!-- CONTACT -->  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="muted">This demo uses client‑side validation and can submit to Formspree/Netlify.</p>
+      <form class="contact" id="contactForm" action="https://formspree.io/f/your-id" method="POST" novalidate>
+        <div>
+          <label class="small" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div>
+          <label class="small" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="full">
+          <label class="small" for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project…" required></textarea>
+        </div>
+        <div class="full"><button class="btn" type="submit">Send message</button></div>
+        <p id="formMsg" class="small" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"><div class="mark" aria-hidden="true"></div><span>NOVA</span></div>
+        <p class="small">© <span id="year"></span> Nova. Built with ♥. You can use this template for personal or commercial projects.</p>
+      </div>
+      <div>
+        <strong>Product</strong>
+        <ul class="small" style="list-style:none;padding:0;display:grid;gap:6px;margin-top:10px">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Company</strong>
+        <ul class="small" style="list-style:none;padding:0;display:grid;gap:6px;margin-top:10px">
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Social</strong>
+        <ul class="small" style="list-style:none;padding:0;display:grid;gap:6px;margin-top:10px">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn?.addEventListener('click',()=>{
+      const nav = document.querySelector('.navlinks');
+      nav?.classList.toggle('hidden');
+    });
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id && id.length>1){
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({behavior:'smooth'});
+          const nav = document.querySelector('.navlinks');
+          if(getComputedStyle(menuBtn).display!=='none') nav?.classList.add('hidden');
+        }
+      })
+    })
+    // Year
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Contact form client-side validation + fake submit
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      formMsg.textContent='';
+      const data = new FormData(form);
+      const name = data.get('name');
+      const email = data.get('email');
+      const message = data.get('message');
+      if(!name || !email || !message){
+        formMsg.textContent='Please fill all fields.'; return;
+      }
+      // Basic email format check
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        formMsg.textContent='Please enter a valid email address.'; return;
+      }
+      formMsg.textContent='Sending…';
+      try{
+        // DEMO: remove this block and allow the native POST to Formspree/Netlify by deleting preventDefault above.
+        await new Promise(r=>setTimeout(r,800));
+        form.reset();
+        formMsg.textContent='Thanks! Your message has been sent.';
+      }catch(err){
+        formMsg.textContent='Something went wrong. Please try again.';
+      }
+    });
+  </script></body>
+</html>
